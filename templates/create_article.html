@@ -1,0 +1,15 @@
+{% extends 'base_file.html' %}
+{% block title  %}
+About me
+{% endblock %}
+{% block body  %}
+<div class = "container mt-5">
+  <h1>Добавление статьи</h1>
+  <form action="" method="post"> <br> <!--начало формы-->
+    <input type="text" name= "title" id = "title" class="form-control" placeholder = "Введите название"><br>
+    <textarea name="intro" id="itntro" placeholder = "Введите анонс"class = "form-control" ></textarea><br>
+    <textarea name="text" id="ttext" placeholder = "Введите основной текст" class = "form-control" ></textarea><br>
+    <input type="submit" class = "btn btn-success" value = "отпрвить">
+  </form> <!--конец формы-->
+</div>
+{% endblock %}
