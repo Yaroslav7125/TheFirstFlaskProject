@@ -1,0 +1,33 @@
+{% extends 'base_file.html' %} <!--от кого отначледовали шаблон-->
+
+{% block title %} <!---блок title-->
+
+The Articles
+
+{% endblock %}<!--- конец блока title-->
+
+
+
+{% block body %} <!---блок body (тег вклюючён)-->
+
+<div class="container mt-5">
+
+     <h1>Posts</h1>
+
+     
+        <!--{/{  тут переменная и она вставиться в html code  (слэши удолить)}/}--->
+
+   <!---{/{articles[0].title}/}-->  <!--обращение к первому элементу массива artciles который передан из бд-->
+
+
+   {% for  element in articles  %}
+        <div class="alert alert-info">
+            <h2> {{element.title}}</h2>
+            <p>{{element.intro}}</p>
+            <p>Дата буликации: {{element.date.date()}}</p> <!---date() для корректного вывода даты-->
+            <button class="btn btn-warning">Детальнее</button>
+        </div>
+   {% endfor %}
+
+
+{% endblock %}<!--- конец блока body-->

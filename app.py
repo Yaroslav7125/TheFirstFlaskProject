@@ -51,5 +51,16 @@ def NextSite():#name , id):
         return render_template("create_article.html")
         #return "SecondSite.html" + name + str(id);
 
+
+
+@app.route('/posts/') # отображение инфы из бд
+def veiwPosts():
+    #article = Article.query.first()  #обращяемся именно к той табличке которая отдена под статьи (12 строка)
+    #article = Article.query.first()  # first - первая строка в таблице
+    #article = Article.query.all()  # все записи  в таблице
+    articles = Article.query.order_by(Article.date).all()  # все записи в таблице, метод  order_by(Artcie.<поле модели) #вертает массив данных из бд
+    return render_template("Posts.html", articles=articles); # передача массива для дальнейшего отображения массива в шаблон
+
+
 if __name__ == "__main__":
     app.run(debug=True);
