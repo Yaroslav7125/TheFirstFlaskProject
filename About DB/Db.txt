@@ -1,0 +1,6 @@
+ДОБАВЛЕНИЕ УСЛОВАНИЯ (АГРНИЧЕНИЕ НА КАКЮ ЛЮБО КОЛОНКУ)
+
+ALTER TABLE STUDENTS ADD CONSTRAINT AVG_BALL
+CHECK(AVG_BALL>=3 and AVG_BALL<=5);
+
+=================================================
