@@ -1,9 +1,8 @@
 from flask import  Flask, render_template, url_for, request, redirect
 from datetime import datetime
 from flask_sqlalchemy import  SQLAlchemy
-<<<<<<< HEAD
 
-=======
+
 #import routing
 
 app = Flask(__name__)
