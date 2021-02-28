@@ -5,7 +5,6 @@ from flask_sqlalchemy import  SQLAlchemy
 
 =======
 #import routing
->>>>>>> 3b806da (Getting from Github (Kir))
 
 app = Flask(__name__)
 
