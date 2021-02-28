@@ -1,7 +1,11 @@
 from flask import  Flask, render_template, url_for, request, redirect
 from datetime import datetime
 from flask_sqlalchemy import  SQLAlchemy
+<<<<<<< HEAD
 
+=======
+#import routing
+>>>>>>> 3b806da (Getting from Github (Kir))
 
 app = Flask(__name__)
 
@@ -10,6 +14,14 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///sblog.db'# создание базы данных
 db = SQLAlchemy(app)
 #db.create_all() создание базы
+
+@app.route('/')
+def index():
+    return render_template('base_file.html')
+
+@app.route('/create_article')
+def create_article():
+    return render_template('create_article.html')
 
 class Article(db.Model):# класс обьектов, которые будем хранить в базе
      id = db.Column(db.Integer, primary_key = True)
