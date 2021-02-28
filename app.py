@@ -13,9 +13,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///sblog.db'# создание �
 db = SQLAlchemy(app)
 #db.create_all() создание базы
 
-@app.route('/')
-def index():
-    return render_template('base_file.html')
 
 @app.route('/create_article')
 def create_article():
@@ -72,13 +69,19 @@ def veiwPosts():
     #article = Article.query.first()  #обращяемся именно к той табличке которая отдена под статьи (12 строка)
     #article = Article.query.first()  # first - первая строка в таблице
     #article = Article.query.all()  # все записи  в таблице
-    print(url_for('regist'))
+    #print(url_for('regist'))
     articles = Article.query.order_by(Article.date).all()  # все записи в таблице, метод  order_by(Artcie.<поле модели) #вертает массив данных из бд
     return render_template("posts.html", articles=articles); # передача массива для дальнейшего отображения массива в шаблон
 
 @app.route('/reg/')
 def regist():
     return render_template('reg_.html')
+
+#@app.route('/postreg/', methods = ["POST","GET"])
+#def postreg():
+   # return 'postreg'
+
+
 
 
 if __name__ == "__main__":
