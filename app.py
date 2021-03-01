@@ -38,7 +38,7 @@ def index():
     return render_template("index.html");
 
 
-#роутинг стронички about
+#роутинг странички about
 #@app.route('/<string:name>/<int:id>')
 @app.route('/create', methods = ['POST', 'GET'])
 def NextSite():#name , id):
