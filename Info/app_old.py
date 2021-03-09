@@ -1,9 +1,13 @@
 from flask import  Flask, render_template, url_for, request, redirect
 from datetime import datetime
 from flask_sqlalchemy import  SQLAlchemy
+<<<<<<< HEAD:app.py
 
 
+=======
+>>>>>>> Structured_FILES:Info/app_old.py
 #import routing
+
 
 app = Flask(__name__)
 
@@ -36,9 +40,9 @@ class Article(db.Model):# класс обьектов, которые будем
 
 # роутинг двух ссылок видёт на отображение одной стронички
 @app.route('/home')
-@app.route('/')
-def index():
-    return render_template("index.html");
+@app.route('/index')
+def indexx():
+    return render_template('index.html')
 
 
 #роутинг стронички about
@@ -72,7 +76,7 @@ def veiwPosts():
     #article = Article.query.first()  #обращяемся именно к той табличке которая отдена под статьи (12 строка)
     #article = Article.query.first()  # first - первая строка в таблице
     #article = Article.query.all()  # все записи  в таблице
-    print(url_for('regist'))
+    print('123')
     articles = Article.query.order_by(Article.date).all()  # все записи в таблице, метод  order_by(Artcie.<поле модели) #вертает массив данных из бд
     return render_template("posts.html", articles=articles); # передача массива для дальнейшего отображения массива в шаблон
 
