@@ -14,6 +14,10 @@ def create_article():
 def indexx():
     return render_template('index.html')
 
+@app.route('/about')
+def aboutpost():
+    return render_template('about.html')
+
 @app.route('/create_article', methods = ['POST', 'GET'])
 def NextSite():
     if request.method == "POST":

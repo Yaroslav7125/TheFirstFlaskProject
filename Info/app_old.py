@@ -1,11 +1,6 @@
 from flask import  Flask, render_template, url_for, request, redirect
 from datetime import datetime
 from flask_sqlalchemy import  SQLAlchemy
-<<<<<<< HEAD:app.py
-
-
-=======
->>>>>>> Structured_FILES:Info/app_old.py
 #import routing
 
 
