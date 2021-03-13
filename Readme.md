@@ -13,8 +13,14 @@
 
 
 
-python runner.py "runserver" --start server
+python runner.py "runserver" #start server
+python main2.py runserver  --host=127.0.0.2 --port 8000 #start server to current  port and api
+
 
 -- creating data base
 from apps import db #
 db.create_all() #
+
+
+            -- working with flask-script
+
