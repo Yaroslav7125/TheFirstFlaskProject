@@ -68,11 +68,8 @@ def veiwPosts():
     #article = Article.query.first()  #обращяемся именно к той табличке которая отдена под статьи (12 строка)
     #article = Article.query.first()  # first - первая строка в таблице
     #article = Article.query.all()  # все записи  в таблице
-<<<<<<< HEAD:app.py
     #print(url_for('regist'))
-=======
     print('123')
->>>>>>> 25ee905056e7577255c433ca1d52242c7a729d45:Info/app_old.py
     articles = Article.query.order_by(Article.date).all()  # все записи в таблице, метод  order_by(Artcie.<поле модели) #вертает массив данных из бд
     return render_template("posts.html", articles=articles); # передача массива для дальнейшего отображения массива в шаблон
 
