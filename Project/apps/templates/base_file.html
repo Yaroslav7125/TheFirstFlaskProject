@@ -2,59 +2,28 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{% block title %} {% endblock%}</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-<!--  <link rel="stylesheet" href={{url_for("static", filename="css/main.css")}}> -->
-
-
-  <link type="text/css" rel="stylesheet" href="{{url_for('static',filename='the_main.css')}}"/>
-  <title>{% block title %}
-
-
-    {% endblock%}</title>
+  <link rel="stylesheet" href="{{url_for('static',file_name='the_main.css')}}">
 </head>
-<body class="d-flex flex-column h-100">
+<body>
+  <div class="dev">
 
-
-
-
-  <!-- The header-->
-  <header class = "TheHeaderBottom">
-<!-- Fixed navbar -->
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand col-md-2" href="/posts/">The posts</a>  <!---ссылка на все посты-->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse col-md-4 offset-md-6" id="navbarCollapse"> <!-- s-->
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item active">
-          <a class="nav-link" aria-current="page" href="/index">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-
-        <form class="d-flex">
-<!--кнопка сreate-->
-          <div class="btn2"><a class="btn btn-outline-success  btn2" href = "/create_article">Create article</a></div>
-      </form>
-
-    </div>
   </div>
-</nav>
-</header>
-  </header> 
   {%block body %}
    {% endblock%}
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
