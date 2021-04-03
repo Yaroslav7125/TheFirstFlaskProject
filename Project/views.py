@@ -55,8 +55,9 @@ def veiwPosts():
 def regist():
     return render_template('reg_.html')
 
-class Article(db.Model):# класс обьекта, которые будем хранить в базе
-     id = db.Column(db.Integer, primary_key = True)
+class Article(db.Model):# создание таблицы 
+    __tablename__ = "Articles"
+     id = db.Column(db.Integer, primary_key = True) #колонки таблицы
      title = db.Column(db.String(100), nullable = False)
      intro = db.Column(db.String(300), nullable = False)
      TheText = db.Column(db.Text, nullable = False)
