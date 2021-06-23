@@ -1,4 +1,6 @@
 #Flask project blog
+*Для запуска проекта необходимо:*
+    python runner.py "runserver" #start server - запустить каманду
 
 
 
