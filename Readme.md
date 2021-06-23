@@ -14,7 +14,7 @@
 
 
 python runner.py "runserver" #start server
-python main2.py runserver  --host=127.0.0.2 --port 8000 #start server to current  port and api
+python main2.py runserver  --host=127.0.0.2 --port 8000 #start server to current  port and ip
 
 
 -- creating data base

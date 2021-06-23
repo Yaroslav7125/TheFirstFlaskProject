@@ -204,6 +204,32 @@ loop.length - возвращает длину цикла(количество и
 
 
 
+   # есть массив с данными articles (данные беруться из бд), его заполняет одна из функций обработки (views)
+
+@app.route('/posts/') # отображение инфы из бд
+def veiwPosts():
+    #article = Article.query.first()  #обращяемся именно к той табличке которая отдена под статьи (12 строка)
+    #article = Article.query.first()  # first - первая строка в таблице
+    #article = Article.query.all()  # все записи  в таблице
+    print('123')
+    articles = Article.query.order_by(Article.date).all()  # все записи в таблице, метод  order_by(Artcie.<поле модели) #вертает массив данных из бд
+    return render_template("posts.html", articles=articles); # передача массива для дальнейшего отображения массива в шаблон
+#в самом posts.html данные попадают в вёрстку по средсву шаблонизатора, а именно -------
+
+{% for  element in articles  %}
+        <div class="alert alert-info">
+            <h2> {{element.title}}</h2>
+            <p>{{element.intro}}</p>
+            <p>Дата буликации: {{element.date.date()}}</p> <!---date() для корректного вывода даты-->
+            <a class="btn btn-warning  btn" href = "">Детальнее</a>
+        </div>
+   {% endfor %}
+
+
+
+
+
+
 
 
 
